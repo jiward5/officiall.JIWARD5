@@ -1,0 +1,612 @@
+/*
+Theme Name: Gorman
+Theme URI: http://shtheme.com/demosd/gorman
+Author: Shtheme
+Author URI: https://themeforest.net/user/shtheme
+Description: In 2021, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: gorman
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+    00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+
+a:hover {
+  color: #c07f50;
+}
+
+.comment-respond {
+  padding-top: 30px;
+}
+
+p.logged-in-as {
+  margin-left: 15px;
+}
+
+p.logged-in-as a {
+  color: #000;
+}
+
+.comment-respond form input.btn-contact {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.comment-respond form textarea {
+  height: 150px;
+}
+
+.comment-form-cookies-consent {
+  display: none;
+}
+
+h3.comment-reply-title {
+  font-size: 24px;
+}
+
+.blog-home.center .item .single-content {
+  text-align: left;
+  padding: 30px;
+  padding-bottom: 45px;
+}
+
+.blog-home.center .item .single-content .more {
+  font-size: 16px;
+  text-shadow: none;
+  padding: 13px 18px 10px 18px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  line-height: 1.75em;
+  font-weight: 300;
+  color: #fff;
+  -webkit-transition: background-color .15s ease-out;
+  transition: background-color .15s ease-out;
+  background-color: #c07f50;
+  margin: 3px 0;
+  border: none;
+}
+
+.blog-home.center .item .single-content .more:hover {
+  background: #1b1b1b;
+}
+
+.blog-home.center .item .single-content .text-content {
+  margin-bottom: 30px;
+}
+
+.blog-home.center .item .single-content .blog-title {
+  font-size: 23px;
+}
+
+.blog-home-navigation ul li span {
+  padding: 5px 15px 5px 15px;
+  display: block;
+  transition: all 0.4s;
+  border: 1px solid #1b1b1b;
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+h5.blog-title {
+  font-size: 25px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.gorman-sidebar-search-form {
+  position: relative;
+}
+
+.gorman-sidebar-search-form input[type="search"] {
+    max-width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    padding: 7px 15px;
+    height: auto;
+    background-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.75em;
+    color: #000;
+    background-image: none;
+    border: 1px solid #ececec;
+}
+
+.gorman-sidebar-search-submit {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: none;
+    border: 0;
+    padding: 13px;
+    font-size: 16px;
+    color: #fff;
+    background: #c07f50;
+    border-radius: 0;
+    border: 1px solid transparent;
+    margin-top: 0px;
+}
+
+.gorman-sidebar-part .single-widget h3.widget-title {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.widget_categories ul {
+  padding-left: 0px;
+}
+
+.widget_categories ul li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #ddd;
+    line-height: 32px;
+}
+
+.widget_categories ul li:last-child {
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+.widget_categories ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+.widget_categories ul li a:hover {
+  color: #c07f50;
+}
+
+.gorman-sidebar-part {
+  max-width: 400px;
+  box-shadow: 0 25px 75px rgb(0 0 0 / 5%);
+  padding: 30px;
+  background: #fff;
+}
+
+.latest {
+    margin-bottom: 18px;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 15px;
+}
+
+.latest a .txt1 {
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 16px;
+  color: #666;
+}
+
+.latest a:hover .txt1 {
+  color: #c07f50;
+}
+
+.latest a .txt2 {
+  color: #666;
+  font-size: 14px;
+  transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.gorman-sidebar-block-latest-posts h3.widget-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.gorman-sidebar-block-content > .latest:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.gorman-sidebar-block-latest-posts {
+  margin-bottom: 45px;
+}
+
+.mb-45 {
+  margin-bottom: 45px;
+}
+
+.wp-tag-cloud {
+  padding-left: 0px;
+}
+
+.wp-tag-cloud li {
+  font-size: 15px;
+      margin: 3px !important;
+    padding: 6px 16px;
+    background-color: #c07f50;
+    color: #fff !important;
+    float: left;
+    font-weight: 500;
+}
+
+.wp-tag-cloud li:hover {
+  background: #1b1b1b;
+}
+
+.wp-tag-cloud li a {
+  color: #fff;
+  font-size: 15px!important;
+}
+
+.gallery.gallery-size-full {
+  display: none;
+}
+
+#contact form textarea {
+  height: 115px;
+}
+
+#contact form input[type="submit"] {
+  margin-top: 15px;
+}
+
+.search-custom h4 {
+  line-height: 34px;
+}
+
+.search-custom form {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.gorman-sidebar-search-form button:hover {
+  border: 1px solid transparent;
+}
+
+.error-section h1 {
+      font-size: 62px;
+}
+
+.error-section h2 {
+    font-size: 40px;
+}
+
+.error-section div.text {
+    font-size: 27px;
+    line-height: 49px;
+}
+
+.error-section a.theme-btn {
+    display: inline-block;
+    font-family: 'Nunito Sans', sans-serif;
+    background: #c07f50;
+    border: 1px solid #c07f50;
+    color: #fff;
+    padding: 12px 25px;
+    margin: 0;
+    font-weight: 400;
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0px;
+    margin-top: 30px;
+}
+
+.error-section a.theme-btn:hover {
+  background: #1b1b1b;
+  border: 1px solid #1b1b1b;
+}
+
+@media (max-width: 768px) {
+  .logged-in .gorman-nav-toggle {
+    top: 46px!important;
+  }
+
+  .logged-in .gorman-aside .gorman-logo {
+    margin-top: 20px;
+  }
+
+}
+
+.single-content .info {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.single-content .info .distance {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.single-content .info a[rel="author"] {
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.comments-area {
+	padding-bottom: 0px;
+}
+
+.comment-author h3.name a {
+	text-transform: capitalize;
+}
+
+ol.comment-list li.comment .reply a {
+  font-size: 14px;
+}
+
+.single-widget.widget_categories, .single-widget.widget_tag_cloud {
+  margin-bottom: 30px;
+  overflow: hidden;
+  margin-left: 15px;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.blog-sidebar h3.widget-title {
+    padding-bottom: 5px;
+    font-size: 22px;
+    line-height: 1.75em;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.widget_search {
+  width: 100%;
+}
+
+ul.gorman-pagination-wrap li span {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 34px;
+    text-align: center;
+    color: #717178;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 1;
+    text-decoration: none;
+    background: #c07f50;
+    border: 1px solid #c07f50;
+    color: #fff;
+}
+
+span.category a {
+  text-transform: capitalize;
+}
+
+div#error {
+  padding-left: 30px;
+}
+
+.gorman-aside {
+  overflow-y: inherit;
+}
+
+section.gorman-blog > .container {
+  max-width: inherit!important;
+}
+
+.gorman-blog .item:hover img {
+  transform: none;
+}
+
+.gorman-blog .single-content {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  text-align: left;
+  padding: 30px;
+  padding-bottom: 45px;
+}
+
+.blog-entry .info a[rel="author"] {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    color: #1b1b1b;
+}
+
+.blog-entry .info a[rel="author"]:hover {
+  color: #c07f50;
+}
+
+.blog-entry .info {
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    color: #1b1b1b;
+    letter-spacing: 0.5px;
+    color: #000;
+}
+
+.single-content .more {
+  font-size: 16px;
+  text-shadow: none;
+  padding: 13px 18px 10px 18px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  line-height: 1.75em;
+  font-weight: 400;
+  color: #fff;
+  -webkit-transition: background-color .15s ease-out;
+  transition: background-color .15s ease-out;
+  background-color: #c07f50;
+  margin: 3px 0;
+  border: none;
+}
+
+.single-content .more:hover {
+    background-color: #1b1b1b;
+}
+
+p.text-content {
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 35px;
+    font-size: 17px;
+  }
+
+.blog-sidebar {
+  max-width: 400px;
+  box-shadow: 0 25px 75px rgb(0 0 0 / 5%);
+  padding: 15px;
+  background: #fff;
+  padding-top: 30px;
+}
+
+.blog-sidebar .widget {
+  background: #fff;
+  padding: 0px;
+}
+
+.gorman-blog .col-md-8 > .item {
+    padding-right: 15px;
+}
+
+.widget.search form input {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border: none;
+  padding: 7px 15px;
+  height: auto;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #000;
+  background-image: none;
+  border: 1px solid #ececec;
+}
+
+.widget.search h3 {
+  padding-bottom: 0px;
+}
+
+
+.widget.search form button[type="submit"] {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: none;
+  border: 0;
+  padding: 10px 13px 5px 13px;
+  font-size: 16px;
+  color: #fff;
+  background: #c07f50;
+  border-radius: 0;
+  border: 1px solid transparent;
+  margin-top: 0px;
+}
+
+.widget.search form button[type="submit"]:hover {
+  background: #1b1b1b;
+}
+
+section.gorman-blog h2.heading-title {
+  font-size: 35px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.line-hr-primary {
+    width: 50px;
+    border-top: 1px solid #c07f50 !important;
+    margin: 0 auto 30px 0;
+}
+
+.widget ul.recent {
+  margin-bottom: 30px;
+}
+
+.widget_categories h3.widget-title {
+  padding-bottom: 0px;
+}
+
+.blog-sidebar .widget .recent li {
+  border-bottom: 1px dotted #9999;
+    padding-bottom: 15px;
+}
+
+.blog-sidebar .widget .recent li:last-child {
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+.blog-sidebar .widget .recent a {
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 8px;
+}
+.single-content .more{
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.gorman-nav-toggle i{
+	top: -5px;
+}
+
+.dark-header .gorman-aside {
+  background: #1e1e22;
+}
+
+.dark-header .gorman-aside .gorman-logo .desc .image-wrap img {
+    border-radius: 100%;
+    border: 7px solid #303037;
+}
+
+.dark-header .gorman-aside .gorman-main-menu ul li a {
+    color: #999;
+}
+
+.dark-header .gorman-aside .gorman-main-menu ul li:hover a {
+    color: #c07f50;
+}
+
+.dark-header .gorman-aside .gorman-footer p {
+    font-size: 12px;
+    color: #999;
+}
+.js.elementor-html .animate-box {
+    opacity: 1!important;
+}
+.js.elementor-html .gorman-hero .flexslider .slider-text {
+    opacity: 1;
+}
